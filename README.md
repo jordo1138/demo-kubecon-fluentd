@@ -12,9 +12,11 @@ The order of the demo was:
 I used mockoon for the simnple action api to make it easier to setup the demo as the main focus is on the exec_out plugin and extracting the dynamic uri based on the event stream
 https://mockoon.com/
 
-// fluentd:9880 is http_input on fluentd, which takes the tag and extracts the value of the field, in this case SpotInstanceError and KubeCon and passes to the exec_out as the first argument in running the code, which is another bash script to make a 2nd api call to a separate api service using the passed extracted value to build the uri. See events.sh
- curl -X POST -d 'json={"error":"SpotInstanceError"}' http://fluentd:9880/error
- curl -X POST -d 'json={"event":"KubeCon"}' http://fluentd:9880/event
+fluentd:9880 is http_input on fluentd, which takes the tag and extracts the value of the field, in this case SpotInstanceError and KubeCon and passes to the exec_out as the first argument in running the code, which is another bash script to make a 2nd api call to a separate api service using the passed extracted value to build the uri. See events.sh
+
+curl -X POST -d 'json={"error":"SpotInstanceError"}' http://fluentd:9880/error
+ 
+curl -X POST -d 'json={"event":"KubeCon"}' http://fluentd:9880/event
  
  
 please check out the prezi slide deck here: https://prezi.com/view/QKPVen7RceLYVgpSYeWf/
