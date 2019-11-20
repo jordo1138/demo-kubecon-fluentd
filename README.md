@@ -1,6 +1,6 @@
 # demo-kubecon-fluentd
 2019 KubeCon Talk Demo Code - Fluentd http_input and exec_out plugins
-These are the files used during the demo my talk "From Issue to PR Merged: A Fluentd 'Tail'"
+These are the files used during the demo in my talk "From Issue to PR Merged: A Fluentd 'Tail'"
 In order to set it up you just need fluentd or tdagent running and then make up the api also used in the events.sh
 
 The order of the demo was:
